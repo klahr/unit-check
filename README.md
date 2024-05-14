@@ -1,4 +1,4 @@
-# UnitCheck
+# UnitCheck - A Lightweight C Library for Unit Testing
 
 ## Table of Contents
 - [Description](#description)

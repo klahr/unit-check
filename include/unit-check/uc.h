@@ -13,8 +13,6 @@ extern "C" {
 void UC_RunTest(const char* fn_name);
 void UC_Assert(int condition, const char* description, const char* filename, int line);
 int UC_PrintResults(void);
-void UC_SetStdOutput(FILE* stream);
-void UC_SetErrOutput(FILE* stream);
 
 #define TEST(fn) \
 	__attribute__((constructor)) void fn(void); \

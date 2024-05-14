@@ -29,4 +29,3 @@ int UC_PrintResults() {
 		return 1;
 	}
 }
-

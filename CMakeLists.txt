@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.15)
 project (unit-check
 	VERSION
-		0.1.0
+		1.0.0
 	DESCRIPTION
 		"UnitCheck"
 	LANGUAGES
@@ -28,4 +28,3 @@ install(DIRECTORY include/unit-check/ DESTINATION ${CMAKE_INSTALL_PREFIX}/includ
 install(TARGETS ${PROJECT_NAME} LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 
 add_custom_target(uninstall COMMAND rm -rf ${CMAKE_INSTALL_PREFIX}/include/unit-check; rm -rf ${CMAKE_INSTALL_PREFIX}/lib/libunit-check*)
-

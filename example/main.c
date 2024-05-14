@@ -16,4 +16,3 @@ TEST(Colors) {
 int main(void) {
 	return UC_PrintResults();
 }
-

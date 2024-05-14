@@ -4,6 +4,7 @@
 #define UC_H
 
 #include <stdio.h>
+#include <string.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -11,14 +12,14 @@ extern "C" {
 
 void UC_RunTest(const char* fn_name);
 void UC_Assert(int condition, const char* description, const char* filename, int line);
-int UC_PrintResults();
+int UC_PrintResults(void);
 void UC_SetStdOutput(FILE* stream);
 void UC_SetErrOutput(FILE* stream);
 
 #define TEST(fn) \
-	__attribute__((constructor)) void fn(); \
-	__attribute__((constructor)) void _##fn() { UC_RunTest(#fn); } \
-	void fn()
+	__attribute__((constructor)) void fn(void); \
+	__attribute__((constructor)) void _##fn(void) { UC_RunTest(#fn); } \
+	void fn(void)
 
 #ifdef ASSERT
 #	undef ASSERT

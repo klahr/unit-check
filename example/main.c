@@ -11,6 +11,8 @@ TEST(Colors) {
 	const int blue = 0x0000ffff;
 	ASSERT_FALSE(red == blue, "Red is not blue");
 	ASSERT_TRUE(red != blue, "Red is still not blue");
+	ASSERT_EQ(red, red, "Red is red");
+	ASSERT_NE(blue, red, "Blue is not red");
 }
 
 int main(void) {

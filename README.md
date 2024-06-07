@@ -45,6 +45,8 @@ TEST(Colors) {
 	const int blue = 0x0000ffff;
 	ASSERT_FALSE(red == blue, "Red is not blue");
 	ASSERT_TRUE(red != blue, "Red is still not blue");
+	ASSERT_EQ(red, red, "Red is red");
+	ASSERT_NE(blue, red, "Blue is not red");
 }
 
 int main(void) {
@@ -67,8 +69,10 @@ test: Math
 test: Colors
   "Red is not blue" (main.c:12) [<b style="color: lightgreen">PASSED</b>]
   "Red is still not blue" (main.c:13) [<b style="color: lightgreen">PASSED</b>]
+  "Red is red" (main.c:14) [<b style="color: lightgreen">PASSED</b>]
+  "Blue is not red" (main.c:15) [<b style="color: lightgreen">PASSED</b>]
 
-5/5 tests passed
+7/7 tests passed
 <b style="color: lightgreen">SUCCESS</b>
 </code>
 </pre>

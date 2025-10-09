@@ -12,8 +12,8 @@ extern "C" {
 
 void UC_RunTest(const char* fn_name);
 void UC_Assert(int condition, const char* description, const char* filename, int line);
-void UC_AssertExpected(const char* expected, const char* actual, int condition, const char* description, const char* filename, int line);
-void UC_AssertNotExpected(const char* actual, int condition, const char* description, const char* filename, int line);
+void UC_AssertEqInt(int expected, int actual, const char* description, const char* filename, int line);
+void UC_AssertNeInt(int not_expected, int actual, const char* description, const char* filename, int line);
 int UC_PrintResults(void);
 
 #define TEST(fn) \
@@ -29,8 +29,8 @@ int UC_PrintResults(void);
 #define ASSERT_TRUE(condition, description) ASSERT((condition) > 0, description)
 #define ASSERT_FALSE(condition, description) ASSERT((condition) == 0, description)
 #define ASSERT_STR_EQ(first, second, description) ASSERT(strcmp(first, second) == 0, description)
-#define ASSERT_EQ(expected, actual, description) UC_AssertExpected(#expected, #actual, (expected) == (actual), description, (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__), __LINE__)
-#define ASSERT_NE(not_expected, actual, description) UC_AssertNotExpected(#actual, (not_expected) != (actual), description, (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__), __LINE__)
+#define ASSERT_EQ(expected, actual, description) UC_AssertEqInt((expected), (actual), description, (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__), __LINE__)
+#define ASSERT_NE(not_expected, actual, description) UC_AssertNeInt((not_expected), (actual), description, (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__), __LINE__)
 
 #ifdef __cplusplus
 }

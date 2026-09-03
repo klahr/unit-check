@@ -17,7 +17,7 @@ UnitCheck, the minimalist C library designed to streamline your unit testing pro
 ## Installation
 
 ```bash
-$ git clone https://git.sr.ht/~klahr/unit-check
+$ git clone https://github.com/klahr/unit-check
 $ cd unit-check/
 $ mkdir build
 $ cd build/
@@ -78,4 +78,4 @@ test: Colors
 </pre>
 
 ## Maintainers
-[~klahr](https://sr.ht/~klahr)
+[~klahr](https://github.com/klahr)

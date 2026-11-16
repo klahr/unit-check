@@ -4,6 +4,7 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Example](#example)
+- [License](#license)
 - [Maintainers](#maintainers)
 
 ## Description
@@ -76,6 +77,9 @@ test: Colors
 <b style="color: lightgreen">SUCCESS</b>
 </code>
 </pre>
+
+## License
+UnitCheck is licensed under the GNU General Public License, version 3 or (at your option) any later version (GPL-3.0-or-later). See [COPYING](./COPYING).
 
 ## Maintainers
 [~klahr](https://github.com/klahr)
